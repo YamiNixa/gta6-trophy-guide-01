@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap, missable warnings, cited guides, checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Atlas</h1>
+    <p class="lede">The complete trophy guide and tracker for GTA VI: every trophy with its official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that saves in your browser. Works fully offline.</p>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <div class="progress-numbers"><strong id="earned-count">0</strong><span> / 55 earned</span><span id="earned-pct" class="pct">0%</span></div>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-grades" id="progress-grades"></p>
+    </div>
+    <nav class="page-nav" aria-label="Sections">
+      <a href="#guide">Trophy guide</a>
+      <a href="#roadmap">Roadmap to platinum</a>
+      <a href="#missables">Missable warnings</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="guide" aria-label="Trophy guide and tracker">
+    <div class="toolbar">
+      <label class="search-label">Search
+        <input id="search" type="search" placeholder="Trophy, mission or place…" autocomplete="off">
+      </label>
+      <label class="spoiler-label"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+      <label class="grade-label">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="earned-label">Show
+        <select id="earned-filter">
+          <option value="all">All trophies</option>
+          <option value="todo">Not earned yet</option>
+          <option value="done">Earned</option>
+        </select>
+      </label>
+      <div class="io-buttons">
+        <button id="export" type="button">Export progress</button>
+        <label class="import-label">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+        <button id="reset" type="button">Reset</button>
+      </div>
+    </div>
+
+    <div class="kind-chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+
+    <p class="list-meta" id="list-meta"></p>
+    <div class="trophy-list" id="trophy-list"></div>
+    <p class="empty-note" id="empty-note" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+  </section>
+
+  <section id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-intro">One playthrough, about 200 hours, three stages. Figures and order follow PowerPyx's trophy roadmap; the words are our own.</p>
+    <dl class="fact-grid" id="fact-grid"></dl>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section id="missables" aria-label="Missable warnings">
+    <h2>Missable warnings</h2>
+    <p class="section-intro">Built from the official descriptions and the launch guides. Only one trophy in the whole list may be missable — everything else can be finished in free roam after the story.</p>
+    <div class="warnings" id="warnings"></div>
+  </section>
+
+  <section id="sources" aria-label="Sources">
+    <h2>Sources</h2>
+    <p class="section-intro">Trophy names, descriptions and grades are shown as PlayStation publishes them, as listed by PSNProfiles and Exophase on 18 November 2026. Every guide on this page was written for this entry in its own words; the facts it rests on come from these launch guides, named beside each trophy. No text was copied from them.</p>
+    <ul class="source-list" id="source-list"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Atlas — an unofficial, fan-made guide. Not affiliated with Rockstar Games, Take-Two Interactive or PlayStation. No Rockstar logo, artwork or game imagery is used here; the look is our own.</p>
+  <p>Progress is stored only in this browser (localStorage). Export saves a JSON file you can import back on any device.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
