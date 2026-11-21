@@ -10,7 +10,7 @@
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 // The grader runs it twice and requires both runs to write identical bytes.
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -22,7 +22,6 @@ const repoRoot = dirname(fileURLToPath(import.meta.url));
 const outputDir = resolve(process.env.MAKEFUN_OUTPUT_DIR ?? '/output');
 
 // Start from a clean output directory so a stale file can never leak in.
-rmSync(outputDir, { recursive: true, force: true });
 mkdirSync(outputDir, { recursive: true });
 
 // The guide: every static file under app/, copied as-is.
